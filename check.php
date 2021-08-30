@@ -12,6 +12,7 @@ if ($connection==false){
 else{
 echo 'Я удачно подключился';
 };
+echo "123";
 $result=mysqli_query($connection, "SELECT*FROM `регистрация`");
 $r1=mysqli_fetch_assoc($result);
 print_r($r1);
