@@ -1,13 +1,18 @@
 <?php
-declare(strict_types=1);
-
-require_once 'vendor/autoload.php';
-
-$shawarmaodessa = new \App\Shawarma\ShawarmaOdessa();
-$shawarmagov = new \App\Shawarma\ShawarmaGov();
-$shawarmamutton = new \App\Shawarma\ShawarmaMutton();
-
-$card = new \App\Shawarma\ShawarmaCalculator();
-$card->add($shawarmaodessa);
-$card->add($shawarmagov);
-$card->add($shawarmamutton);
+//    public function testPadLeft()
+//    {
+//        $this->assertEquals(
+//            '-=-=-James',
+//            Str::padLeft('James', 10, '-=')
+//        );
+//
+//        $this->assertEquals(
+//            '     James',
+//            Str::padLeft('James', 10)
+//        );
+//    }
+    function padLeft(string $value, int $length, string $pad = ' '): string
+    {
+        return str_pad($value, $length, $pad, STR_PAD_LEFT);
+    }
+echo padleft();
